@@ -17,11 +17,13 @@ public class ChatServer {
 		try {
 			server = new ServerSocket(porta);
 			System.out.println("Servidor iniciado na porta "+ porta);
+			System.out.println("Aguardando conexão...");
 			while (true) {
 				Socket socket = server.accept();
 				new Thread(new EscutaCliente(socket)).start();
 				PrintWriter p = new PrintWriter(socket.getOutputStream());
 				escritores.add(p);
+				System.out.println("Cliente se conectou!");
 			}
 		} catch (IOException e) {
 			System.out.println("Servidor nao pode ser iniciado na porta "+ porta);
