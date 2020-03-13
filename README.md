@@ -3,3 +3,14 @@
   <h3 align="center">Java Projects</h3>
   <p align="center">Repositório dedicado aos projetos desenvolvidos para aprendizagem e estudos específicos da linguagem Java.</p>
  </p>
+
+## Projetos para Desktop
+
+* Chat
+* Estruturas de Dados
+* Recursividade vs Iteratividade
+* Socket TCP
+* Threads e Concorrências
+
+## Projetos para Web
+* Livros Web
