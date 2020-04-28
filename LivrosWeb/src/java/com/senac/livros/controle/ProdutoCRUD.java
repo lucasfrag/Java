@@ -5,7 +5,7 @@
  */
 package com.senac.livros.controle;
 
-import com.senac.livros.modelo.Livro;
+import com.senac.livros.modelo.Produto;
 import java.awt.HeadlessException;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
@@ -17,9 +17,9 @@ import java.util.ArrayList;
  *
  * @author vanessa
  */
-public class LivroCRUD {
+public class ProdutoCRUD {
     ConexaoBD conexaobd = new ConexaoBD();
-    Livro livros = new Livro();
+    Produto livros = new Produto();
     
     //Metodo que insere os dados no banco dados
     
@@ -28,7 +28,7 @@ public class LivroCRUD {
      * @param livros
      * @throws java.sql.SQLException
      */
-    public void cadastrar(Livro livros) throws SQLException {
+    public void cadastrar(Produto livros) throws SQLException {
         String sql ="insert into livros (titulo, autor, ano, estado, disponivel, status) values (?,?,?,?,?,?)";
         
         try {
@@ -49,9 +49,9 @@ public class LivroCRUD {
     }
 
 
-    public ArrayList<Livro> listaTodos() {
+    public ArrayList<Produto> listaTodos() {
         String sql = "SELECT * FROM livros where status = 'A'";
-        ArrayList<Livro> dados = new ArrayList<>();
+        ArrayList<Produto> dados = new ArrayList<>();
         conexaobd.abrirConexao();
         conexaobd.executaSql(sql);
         
@@ -61,7 +61,7 @@ public class LivroCRUD {
             
             do{
                 //preenchendo tabela
-                Livro lv = new Livro();
+                Produto lv = new Produto();
                 
                 lv.setId(conexaobd.rs.getInt("id"));
                 lv.setTitulo(conexaobd.rs.getString("titulo"));
@@ -88,7 +88,7 @@ public class LivroCRUD {
      * @param livros
      * @throws java.sql.SQLException
      */
-        public void excluirLivros(Livro livros) throws SQLException{
+        public void excluirLivros(Produto livros) throws SQLException{
         
             String sqlQuery= "UPDATE livros SET status= 'I' WHERE id = ?";
         
@@ -102,7 +102,7 @@ public class LivroCRUD {
     }
         
         
-         public void atualizarLivros(Livro livros) throws SQLException{
+         public void atualizarLivros(Produto livros) throws SQLException{
         String sqlQuery= "UPDATE livros SET Titulo= ?, Autor=? WHERE id = ?";
         
         try(PreparedStatement consulta = conexaobd.abrirConexao() .prepareStatement(sqlQuery)) {

@@ -28,7 +28,7 @@ public class ConexaoBD{
 public  ConexaoBD() {
     try {
          Class.forName("com.mysql.jdbc.Driver");
-         conexao = (Connection) DriverManager.getConnection("jdbc:mysql://localhost:3306/livros","root","");//String de conexao
+         conexao = (Connection) DriverManager.getConnection("jdbc:mysql://localhost:3306/adm_eletronicos","root","");//String de conexao
             System.out.println("Sucesso na conexao");
         }catch (ClassNotFoundException ex) {
             System.out.println("Falha:nao encontrou a classe de conexao");

@@ -7,7 +7,7 @@
 package com.senac.livros.controle;
 
 
-import com.senac.livros.modelo.Livro;
+import com.senac.livros.modelo.Produto;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import org.springframework.stereotype.Controller;
@@ -21,7 +21,7 @@ import org.springframework.web.bind.annotation.RequestParam;
  * @author vanessa
  */
 @Controller
-public class LivroController {
+public class ProdutoController {
     
     @RequestMapping("/cadastro")
     public String cadastro(Model model){
@@ -52,8 +52,8 @@ public class LivroController {
             @RequestParam("disponivel") String disponivel) throws SQLException{   
      
         
-        LivroCRUD livroCRUD = new LivroCRUD();
-        Livro novoLivro = new Livro();
+        ProdutoCRUD livroCRUD = new ProdutoCRUD();
+        Produto novoLivro = new Produto();
         
         novoLivro.setTitulo(titulo);
         novoLivro.setAutor(autor);
@@ -78,8 +78,8 @@ public class LivroController {
     @RequestMapping("/livros")
     public String listar (Model model){
         
-        LivroCRUD livroCRUD = new LivroCRUD();
-        ArrayList<Livro> livrosCadastrados  = livroCRUD.listaTodos();
+        ProdutoCRUD livroCRUD = new ProdutoCRUD();
+        ArrayList<Produto> livrosCadastrados  = livroCRUD.listaTodos();
         model.addAttribute("listaLivros", livrosCadastrados);
         
         return "livros";
@@ -104,8 +104,8 @@ public class LivroController {
             @RequestParam("autor") String autor
             )throws SQLException{
         
-        LivroCRUD livroB = new LivroCRUD();
-        Livro l = new Livro();
+        ProdutoCRUD livroB = new ProdutoCRUD();
+        Produto l = new Produto();
         l.setId(id);
         l.setAutor(autor);
         l.setTitulo(titulo);
@@ -132,8 +132,8 @@ public class LivroController {
     public String excluir(@RequestParam("id") int id)
             throws SQLException {
 
-        LivroCRUD livroB = new LivroCRUD();
-        Livro l = new Livro();
+        ProdutoCRUD livroB = new ProdutoCRUD();
+        Produto l = new Produto();
         l.setId(id);
         livroB.excluirLivros(l);
         return "index";

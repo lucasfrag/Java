@@ -10,7 +10,7 @@ package com.senac.livros.modelo;
  *
  * @author vanessa
  */
-public class Livro  {
+public class Produto  {
     
 
     /**

@@ -243,7 +243,7 @@ public class ProdutoBD {
             while (rs.next()) {
                 ProdutoModel produto = new ProdutoModel();
                 produto.setId(rs.getInt("ID"));
-        	produto.setNome(rs.getString("NOME"));
+        	   produto.setNome(rs.getString("NOME"));
                 produto.setFabricante(rs.getString("FABRICANTE"));
                 produto.setStatus(rs.getString("STATUS"));
                 
