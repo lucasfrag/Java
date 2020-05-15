@@ -6,10 +6,6 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
-/**
- *
- * @author Gabriel
- */
 public class ProdutoBD {
     
     public void cadastrar(Produto p) throws SQLException{

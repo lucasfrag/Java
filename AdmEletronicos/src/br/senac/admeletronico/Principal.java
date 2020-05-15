@@ -10,10 +10,6 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 
 
-/**
- *
- * @author Gabriel
- */
 public class Principal {
     public static void main(String[] args) {
         JFrame janela = new JFrame("Adm Eletronicos Desktop");

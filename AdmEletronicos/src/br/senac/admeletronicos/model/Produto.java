@@ -1,9 +1,5 @@
 package br.senac.admeletronicos.model;
 
-/**
- *
- * @author Gabriel
- */
 public class Produto {
     
     private int id;
