@@ -5,13 +5,14 @@
  </p>
 
 ## Projetos para Desktop
-
+* Adm Eletronicos
 * Chat
 * Estruturas de Dados
+* Livros
 * Recursividade vs Iteratividade
 * Socket TCP
 * Threads e Concorrências
 
 ## Projetos para Web
-* ADM Eletrônicos
+* Adm Eletrônicos
 * Livros Web
