@@ -5,7 +5,7 @@
  </p>
 
 ## Projetos para Desktop
-* Adm Eletronicos
+* Adm Eletrônicos
 * Chat
 * Estruturas de Dados
 * Livros
